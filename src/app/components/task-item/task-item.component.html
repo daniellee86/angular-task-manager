@@ -1,1 +1,9 @@
-<p>task-item works!</p>
+<!-- for multi color task items [ngStyle]="{ 'background-color': color } -->
+
+<div class="task">
+  <h3>
+    {{ task.text }}
+    <fa-icon [icon]="faTimes" [ngStyle]="{ color: 'red' }"></fa-icon>
+  </h3>
+  <p>{{ task.day }}</p>
+</div>

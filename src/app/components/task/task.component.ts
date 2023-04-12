@@ -10,4 +10,5 @@ import { TASKS } from '../../mock-tasks';
 export class TaskComponent {
   //set tasks as a property of component
   tasks: Task[] = TASKS;
+  colors = ['red', 'blue', 'green'];
 }
