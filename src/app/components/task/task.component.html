@@ -3,4 +3,5 @@
   *ngFor="let task of tasks; let i = index"
   [task]="task"
   [color]="colors[i]"
+  (onDeleteTask)="deleteTask()"
 ></app-task-item>

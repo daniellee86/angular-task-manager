@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TaskService } from '../../services/task.service';
 import { Task } from '../../Task';
-import { TASKS } from '../../mock-tasks';
 
 @Component({
   selector: 'app-task',
@@ -9,6 +9,12 @@ import { TASKS } from '../../mock-tasks';
 })
 export class TaskComponent {
   //set tasks as a property of component
-  tasks: Task[] = TASKS;
+  tasks: Task[] = [];
   colors = ['red', 'blue', 'green'];
+
+  constructor(private taskService: TaskService) {}
+
+  ngOnInit(): void {
+    this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
+  }
 }
