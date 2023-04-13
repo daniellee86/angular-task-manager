@@ -19,4 +19,10 @@ export const TASKS: Task[] = [
     day: 'May 7th at 12:30pm',
     reminder: false,
   },
+  {
+    id: 4,
+    text: 'Gym time',
+    day: 'July 8th at 09:00pm',
+    reminder: false,
+  },
 ];
