@@ -1,4 +1,4 @@
-<app-add-task></app-add-task>
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
 <!-- for loop over tasks and renders task-item component, each task item can be different color by binding color to colors[i], passing data from parent to child like props in React -->
 <app-task-item
   *ngFor="let task of tasks; let i = index"
